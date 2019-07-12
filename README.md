@@ -6,6 +6,8 @@ Method for segmentation using three-dimensional level set methods, optimized for
 
 ~July, 2019.  Initial release.
 
+Hello! You are welcome to clone/fork this repo.  I am currently working on uploading the data and setting up the dataset release, so some items may not be clear until that is done, and I fill in all of the TODOs in the README.  Give it a few days ...
+
 
 # Underlying ideas; how and when to cite this work
 
@@ -131,32 +133,6 @@ This directory has one image in it. This directory is used when there is space a
 ### Running
 
 To run the method, we discuss how to [run the method](#parameters-run-segmentation-with-an-example-dataset) with the provided examples from the paper.  
-
-TODO 
-- Update with the AgDataCommons info.
-- Add a featured image for the repository.
-- remove all of the build files from tracking.
-- D start here -- change remove dir to something else.
-- D convert all of the OpenCV .data uses.
-- D check on the CC use for Soybean
-- D do not remove directory.
-- D fix issues with paths -- ensure trailing backslash, etc.
-- D test that primary color root marking works as expected.
-- D In progress.-- test write on image
-- D document converting from a cube to slices, what is the input.
-- get rid of all of the TODOs and warnings.
-- D is the background_threshold needed?
-- D document all of the parameters
-- D test on Cassava
-- X test different grid resolution versus band sizes.  For now, grid-resolution has to be >= band size.
-- D document converting output to 3D models.
-- upload everything to Ag Data Commons
-- T Double check all of the arguments, run on the new HPC w/ different arguments for number of threads
-- D spell check
-- D Raw Cassava - resize to gray
-- D. what is CC, versus CClargest???
-- D deal w/color0, also allow initial conditions to be written.  This may be important for some people ....
-- write a method to extract the surface?  Because this isn't working.  Also fill holes inside the volumes, if inside a volume.
 
 ### Parameters, run segmentation with an example dataset
 

@@ -12,7 +12,7 @@ Hello! You are welcome to clone/fork this repo.  I am currently working on uploa
 # Underlying ideas; how and when to cite this work
 
 This README file is to accompany code for robot-world, hand-eye calibration, produced by Amy Tabb as companion to a paper:
-	Solving the Robot-World Hand-Eye(s) Calibration Problem with Iterative Methods
+	Segmenting Root Systems in X-Ray Computed Tomography Images Using Level Sets
 
 ```
 @inproceedings{tabb_segmenting_2018,

@@ -83,13 +83,10 @@ double ComputeEnergyWithHistograms(ImageHistogram& V1, ImageHistogram& V2, doubl
 	double pdf_1 = 0;
 	double pdf_2 = 0;
 
-//	double denominator_class1 = 1.0/(sqrt(2.0*3.14*V1.sigma_sq));
-//	double denominator_class2 = 1.0/(sqrt(2.0*3.14*V2.sigma_sq));
-
 	double class1_e = 0;
 	double class2_e = 0;
 
-	cout << "Stats " << V1.mu << " " << V1.sigma_sq << ", " << V2. mu << ", " << V2.sigma_sq << endl;
+	//cout << "Stats " << V1.mu << " " << V1.sigma_sq << ", " << V2. mu << ", " << V2.sigma_sq << endl;
 
 	double id;
 	for (int i = 0; i < 256; i++){
@@ -182,7 +179,7 @@ double ComputeEnergyWithHistograms(vector<ImageHistogram>& V1, vector<ImageHisto
 			for (int i = 0; i < 256; i++){
 
 				id = double(i)/255.0;
-				//pdf_1 = exp(-pow(id - V1[h].mu, 2)/(2.0*V1[h].sigma_sq))/(sqrt(2.0*3.14*V1[h].sigma_sq));
+
 				pdf_1 = exp(-pow(id - V1[h].mu, 2)/(2.0*V1[h].sigma_sq))/denominator_class1;
 				// how many are there?
 				if (pdf_1 > 0){
@@ -197,7 +194,7 @@ double ComputeEnergyWithHistograms(vector<ImageHistogram>& V1, vector<ImageHisto
 			denominator_class2 = (sqrt(2.0*3.14*V2[h].sigma_sq));
 
 			for (int i = 0; i < 256; i++){
-				//pdf_2 = exp(-pow(id - V2[h].mu, 2)/(2.0*V2[h].sigma_sq))/(sqrt(2.0*3.14*V2[h].sigma_sq));
+
 				pdf_2 = exp(-pow(id - V2[h].mu, 2)/(2.0*V2[h].sigma_sq))/denominator_class2;
 				// how many are there?
 				if (pdf_2 > 0){

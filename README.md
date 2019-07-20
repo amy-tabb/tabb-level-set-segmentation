@@ -6,8 +6,6 @@ Method for segmentation using three-dimensional level set methods, optimized for
 
 ~July, 2019.  Initial release.
 
-Hello! You are welcome to clone/fork this repo.  I am currently working on uploading the data and setting up the dataset release, so some items may not be clear until that is done, and I fill in all of the TODOs in the README.  Give it a few days ...
-
 
 # Underlying ideas; how and when to cite this work
 
@@ -30,15 +28,15 @@ This README file is to accompany code for robot-world, hand-eye calibration, pro
 
 This paper is also available free to read (identical to the IEEE version) on [arXiv](https://arxiv.org/abs/1809.06398).
 
-Dataset and/or code:
+Dataset and/or code is available at Zenodo:
 
-TODO
+http://doi.org/10.5281/zenodo.3333709
 
 If you use this code in project that results in a publication, please cite at a minimum the paper above; I prefer that you cite both sources.  Otherwise, there are no restrictions in your use of this code.  However, no guarantees are expressed or implied.
 
 # Building
 
-This README covers instructions for building the code.
+This README covers instructions for building the code and using the example datasets provided at Zenodo.
 
 ## Dependencies
 
@@ -100,11 +98,9 @@ The executable `level_set_seg` is created.  If you used method 6., the location 
 
 # Datasets, input, output, and run parameters
 
-INPUT FORMAT -- DATASETS ARE POSTED AT THE National Agriculture Library's Ag Data Commons, DOI is TODO **********
+Datasets are posted at Zenodo, [http://doi.org/10.5281/zenodo.3333709](http://doi.org/10.5281/zenodo.3333709)
 
-Access the datasets via link here: TODO ****
-
-It is assumed that the dataset is in the form of a directory of 2D image slices.  Code to convert an existing dataset of 2D images to a different orientation is included, and will be discussed in section ***TODO****.
+It is assumed that the dataset is in the form of a directory of 2D image slices.  Code to convert an existing dataset of 2D images to a different orientation is included, and will be discussed in section [Parameters -- for preprocessing](#parameters-for-preprocessing).
 
 ## Root segmentation
 
@@ -157,7 +153,7 @@ If write-on-image is selected, the final result is indicated, in blue, over the 
   
 #### Example one: soybean
 
-TODO -- update with the dataset name on Ag Data Commons.
+Using input `SoybeanDataset` from the dataset release http://doi.org/10.5281/zenodo.3333709, the result is `SoybeanResultJul11` (also provided as part of the dataset).
 
 Select the segmentation mode using the --segmentation flag, and I have options such as those below:
 
@@ -179,16 +175,16 @@ Select the segmentation mode using the --segmentation flag, and I have options s
 --write-initial=1
 ````
 
-#### Example one: cassava
+#### Example two: cassava
 
-TODO -- update with the dataset name.
+Using input `CassavaDataset` from the dataset release http://doi.org/10.5281/zenodo.3333709, the result is `CassavaResultJul12` (also provided as part of the dataset).
 
 Select the segmentation mode using the --segmentation flag, and I have options such as those below:
  
 ````bash
 --segmentation \
 --input=/home/atabb/DemoData/Xray/Testsets/CassavaDataset/ \
---output=/home/atabb/DemoData/Xray/Results/CassavaJul11/ \
+--output=/home/atabb/DemoData/Xray/Results/CassavaJul12/ \
 --lowerthresh=100 \
 --upperthresh=200 \
 --background=0 \
@@ -245,4 +241,5 @@ For instance, one may run the program as follows:
 ````bash
 ./function-name --preprocessing --input /home/username/Data/Xray/CassavaInput/ --output /home/username/Data/Xray/CassavaOutput/ --max-threads 16
 ````
-TODO revise depending on final project name, update with the data files.
+
+You could use either of the datasets mentioned previously as input, or `CassavaSlices` from the dataset release http://doi.org/10.5281/zenodo.3333709 and use the `images` directory.

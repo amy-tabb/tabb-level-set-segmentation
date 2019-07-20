@@ -6,6 +6,8 @@ Method for segmentation using three-dimensional level set methods, optimized for
 
 ~July, 2019.  Initial release.
 
+[![DOI](https://zenodo.org/badge/196579227.svg)](https://zenodo.org/badge/latestdoi/196579227)
+
 
 # Underlying ideas; how and when to cite this work
 
@@ -28,11 +30,42 @@ This README file is to accompany code for robot-world, hand-eye calibration, pro
 
 This paper is also available free to read (identical to the IEEE version) on [arXiv](https://arxiv.org/abs/1809.06398).
 
-Dataset and/or code is available at Zenodo:
+The dataset files are available at Zenodo:
 
 [http://doi.org/10.5281/zenodo.3333709](http://doi.org/10.5281/zenodo.3333709)
 
-If you use this code in project that results in a publication, please cite at a minimum the paper above; I prefer that you cite both sources.  Otherwise, there are no restrictions in your use of this code.  However, no guarantees are expressed or implied.
+````latex
+@misc{tabb_amy_2019_3333709,
+  author       = {Tabb, Amy and
+                  Duncan, Keith E. and
+                  Topp, Christopher N.},
+  title        = {{Code and Data from: Segmenting Root Systems in 
+                   X-Ray Computed Tomography Images Using Level Sets}},
+  month        = jul,
+  year         = 2019,
+  note         = {{The README file in the code repository has 
+                   documentation for running the code.}},
+  doi          = {10.5281/zenodo.3333709},
+  url          = {https://doi.org/10.5281/zenodo.3333709}
+}
+````
+
+And the code is citable via this DOI:
+
+[https://doi.org/10.5281/zenodo.3344906](https://doi.org/10.5281/zenodo.3344906)
+````latex
+@misc{amy_tabb_2019_3344906,
+  author       = {Amy Tabb},
+  title        = {{amy-tabb/tabb-level-set-segmentation: First 
+                   Release}},
+  month        = jul,
+  year         = 2019,
+  doi          = {10.5281/zenodo.3344906},
+  url          = {https://doi.org/10.5281/zenodo.3344906}
+}
+````
+
+If you use this code in project that results in a publication, please cite at a minimum the paper above; I prefer that you cite the first two sources.  Otherwise, there are no restrictions in your use of this code.  However, no guarantees are expressed or implied.
 
 # Building
 

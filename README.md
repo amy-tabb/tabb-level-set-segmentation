@@ -228,7 +228,7 @@ The image on the left shows the original image layout, where the slices were par
 
 <img src="READMEimages/RM129.png" alt="Example of row-oriented Cassava image" width="300"/>
 
-### Parameters -- for preprocessing
+### Parameters, for preprocessing
 
 Select the preprocessing by using the `--preprocessing` flag, and then arguments are:
 

@@ -30,7 +30,7 @@ This paper is also available free to read (identical to the IEEE version) on [ar
 
 Dataset and/or code is available at Zenodo:
 
-http://doi.org/10.5281/zenodo.3333709
+[http://doi.org/10.5281/zenodo.3333709](http://doi.org/10.5281/zenodo.3333709)
 
 If you use this code in project that results in a publication, please cite at a minimum the paper above; I prefer that you cite both sources.  Otherwise, there are no restrictions in your use of this code.  However, no guarantees are expressed or implied.
 
@@ -153,7 +153,7 @@ If write-on-image is selected, the final result is indicated, in blue, over the 
   
 #### Example one: soybean
 
-Using input `SoybeanDataset` from the dataset release http://doi.org/10.5281/zenodo.3333709, the result is `SoybeanResultJul11` (also provided as part of the dataset).
+Using input `SoybeanDataset` from the dataset release [http://doi.org/10.5281/zenodo.3333709](http://doi.org/10.5281/zenodo.3333709), the result is `SoybeanResultJul11` (also provided as part of the dataset).
 
 Select the segmentation mode using the --segmentation flag, and I have options such as those below:
 
@@ -177,7 +177,7 @@ Select the segmentation mode using the --segmentation flag, and I have options s
 
 #### Example two: cassava
 
-Using input `CassavaDataset` from the dataset release http://doi.org/10.5281/zenodo.3333709, the result is `CassavaResultJul12` (also provided as part of the dataset).
+Using input `CassavaDataset` from the dataset release [http://doi.org/10.5281/zenodo.3333709](http://doi.org/10.5281/zenodo.3333709), the result is `CassavaResultJul12` (also provided as part of the dataset).
 
 Select the segmentation mode using the --segmentation flag, and I have options such as those below:
  
@@ -242,4 +242,4 @@ For instance, one may run the program as follows:
 ./function-name --preprocessing --input /home/username/Data/Xray/CassavaInput/ --output /home/username/Data/Xray/CassavaOutput/ --max-threads 16
 ````
 
-You could use either of the datasets mentioned previously as input, or `CassavaSlices` from the dataset release http://doi.org/10.5281/zenodo.3333709 and use the `images` directory.
+You could use either of the datasets mentioned previously as input, or `CassavaSlices` from the dataset release [http://doi.org/10.5281/zenodo.3333709](http://doi.org/10.5281/zenodo.3333709) and use the `images` directory.

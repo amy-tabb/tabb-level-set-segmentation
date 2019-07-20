@@ -14,7 +14,7 @@ Method for segmentation using three-dimensional level set methods, optimized for
 This README file is to accompany code for robot-world, hand-eye calibration, produced by Amy Tabb as companion to a paper:
 	Segmenting Root Systems in X-Ray Computed Tomography Images Using Level Sets
 
-```
+````latex
 @inproceedings{tabb_segmenting_2018,
 	title = {Segmenting {Root} {Systems} in {X}-{Ray} {Computed} {Tomography} {Images} {Using} {Level} {Sets}},
 	doi = {10.1109/WACV.2018.00070},
@@ -26,7 +26,7 @@ This README file is to accompany code for robot-world, hand-eye calibration, pro
 	keywords = {Shape, Image segmentation, Computed tomography, Level set, Media, Soil, X-ray imaging},
 	pages = {586--595},
 }
-```
+````
 
 This paper is also available free to read (identical to the IEEE version) on [arXiv](https://arxiv.org/abs/1809.06398).
 
@@ -53,6 +53,7 @@ The dataset files are available at Zenodo:
 And the code is citable via this DOI:
 
 [https://doi.org/10.5281/zenodo.3344906](https://doi.org/10.5281/zenodo.3344906)
+
 ````latex
 @misc{amy_tabb_2019_3344906,
   author       = {Amy Tabb},

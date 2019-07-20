@@ -82,7 +82,7 @@ though depending on the compiler used, you may need different [flags](https://ww
 	
 6. Easy way to build in Ubuntu with [Eclipse CDT](https://www.eclipse.org/cdt/) with git support (Egit): 
 - `git clone` into the directory of choice.  
-- Create new Managed C++ project, for the directory, select the directory where the repository was cloned into.
+- Import->General->Existing projects into the workspace.  Select the directory where the repository was cloned.
 - The compiler and linker flags for OpenCV 4.0 will be imported. Double check that these align with where you have installed OpenCV 4.0. Build and you're ready to run!
 
 7. Easy way to build without Eclipse CDT:

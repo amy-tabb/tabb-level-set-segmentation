@@ -166,7 +166,7 @@ To run the method, we discuss how to [run the method](#parameters-run-segmentati
 
 ### Parameters, run segmentation with an example dataset
 
-Parameter descriptions.  We reference the paper, so provide the link to the arXiv version [arXiv](https://arxiv.org/abs/1809.06398).  It is also assumed that we are dealing with 8-bit greyscale images.  To change to 12- or 16-bit images is possible, but will require rewrites throughout the code. 
+Parameter descriptions.  We reference the paper, so provide the link to the [arXiv version](https://arxiv.org/abs/1809.06398).  It is also assumed that we are dealing with 8-bit greyscale images.  To change to 12- or 16-bit images is possible, but will require rewrites throughout the code. Abbreviated forms of these parameter descriptions can also be found by calling the program with the `--help` flag.
 
 1. input-directory: (string) set up according to [Required Input Directory](#required-input-directories) [Mandatory].
 1. output-directory: (string) ideally empty directory where the results will be written.  Results computed with the method and parameters are also provided with the dataset [Mandatory].
@@ -177,7 +177,7 @@ Parameter descriptions.  We reference the paper, so provide the link to the arXi
 1. grid-resolution: (unsigned integer), this is parameter <span class="math inline"><em>s</em> in the paper, and represents the size of the grid edges.
 1. band-size: (unsigned integer), this is parameter <span class="math inline"><em>b</em> in the paper, and represents the size of the band used for the narrow band distance transform.  <span class="math inline"><em>s</em> ≥ <em>b</em></span>, see section 3.2, of page 4 of the paper for details.   grid-resolution ≥ band-size.
 1. disregard-histogram-grid: (Boolean, 0 or 1). The default value is false.  Section 3.3, page 4 defines sets <span class="math inline"><em>Ω</em><sub>1</sub></span> and <span class="math inline"><em>Ω</em><sub>2</sub></span> through gradual exploration.  However, for one of our datasets, this approach did not work well.  To disregard the grid -- i.e. divide the whole space into <span class="math inline"><em>Ω</em><sub>1</sub></span> and <span class="math inline"><em>Ω</em><sub>2</sub></span> from the start as is usually done in level sets, specify that this variable be 1.  More details in Section 4.2, page 6.
-1. t: ()
+1. t: (int). Maximum value for parameter count(x), Section 3.2, page 4. Default is 1. 
 1. min-contour-size: (int). This is the parameter k on Section 3.4, page 5. When the active contour, <span class="math inline">𝒞<sub><em>a</em></sub></span>, <span class="math inline">|𝒞<sub><em>a</em></sub>|&lt; <em>k</em></span>, the program terminates.  There is a small error in the paper, where instead "<span class="math inline">𝒞<sub><em>a</em></sub> &lt; <em>k</em></span>" is listed.
 1. max-threads: (int). Default is what is returned from omp_get_max_threads(). This code uses OpenMP, and my experience using an older simultaneous hyperthreaded processor is that using the maximum number of threads is not the best use of the machine.  To avoid this problem, set the number of threads using this argument.
 1. write-on-image: (Boolean, 0 or 1), when this parameter is 1, the segmented root regions are written blue over on the original image regions, in a directory `color_final` within the output directory. Default is false. 
@@ -235,7 +235,7 @@ Select the segmentation mode using the --segmentation flag, and I have options s
   
 ### Output format
 
-As alluded to above, the output format will vary depending on what flags are set.  The results are written as individual images black and white images, where the white regions indicate root regions.  The folder `final` holds the segmentation result, and `CClargest` holds the largest connected component.  `CC` holds the connected components that are connected to the initialization regions indicated by the user.
+As alluded to above, the output format will vary depending on what flags are set.  The results are written as individual black and white images, where the white regions indicate root regions.  The folder `final` holds the segmentation result, and `CClargest` holds the largest connected component.  `CC` holds the connected components that are connected to the initialization regions indicated by the user.
 
 ### Converting output to 3D models
 

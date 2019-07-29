@@ -322,20 +322,25 @@ int main (int argc, char **argv)
 
 
 	}	else {
-		// do the preprocessing.
-		string filename = output_directory + "arguments.txt";
-		ofstream out;
-		out.open(filename.c_str());
-		out << "--preprocessing \\" << endl;
-		out << "--input=" << input_directory << "\\" << endl;
-		out << "--output=" << output_directory << "\\" << endl;
-		out << "--max-threads=" << max_number_threads << "\\" << endl;
-		out.close();
+		if (do_preprocessing == 1){
+			// do the preprocessing.
+			string filename = output_directory + "arguments.txt";
+			ofstream out;
+			out.open(filename.c_str());
+			out << "--preprocessing \\" << endl;
+			out << "--input=" << input_directory << "\\" << endl;
+			out << "--output=" << output_directory << "\\" << endl;
+			out << "--max-threads=" << max_number_threads << "\\" << endl;
+			out.close();
 
-		vector<string> list_files;
-		ReadDirectory(input_directory, list_files);
-		WriteSlices(input_directory, list_files, output_directory, max_number_threads);
+			vector<string> list_files;
+			ReadDirectory(input_directory, list_files);
+			WriteSlices(input_directory, list_files, output_directory, max_number_threads);
 
+		}	else {
+			cout << "Options are --help, --preprocessing, or --segmentation. None were chosen.  Quitting." << endl;
+			exit(1);
+		}
 	}
 
 

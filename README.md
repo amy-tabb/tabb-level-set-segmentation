@@ -8,6 +8,7 @@ Method for segmentation using three-dimensional level set methods, optimized for
 
 [![DOI](https://zenodo.org/badge/196579227.svg)](https://zenodo.org/badge/latestdoi/196579227)
 
+Changelog: 7/29/2019 updated parameters to [run the method](#parameters-run-segmentation-with-an-example-dataset).
 
 # Underlying ideas; how and when to cite this work
 
@@ -168,11 +169,11 @@ To run the method, we discuss how to [run the method](#parameters-run-segmentati
 
 Parameter descriptions.  We reference the paper, so provide the link to the [arXiv version](https://arxiv.org/abs/1809.06398).  It is also assumed that we are dealing with 8-bit greyscale images.  To change to 12- or 16-bit images is possible, but will require rewrites throughout the code. Abbreviated forms of these parameter descriptions can also be found by calling the program with the `--help` flag.
 
-1. input-directory: (string) set up according to [Required Input Directory](#required-input-directories) [Mandatory].
-1. output-directory: (string) ideally empty directory where the results will be written.  Results computed with the method and parameters are also provided with the dataset [Mandatory].
-1. lower-root-threshold: see section 4.1 of the paper, page 6. (Integer < 255 and >= 0).  This is the minimum greylevel for the root class  <span class="math inline"><em>Ω</em><sub>2</sub></span>.
-1. upper-root-threshold: see section 4.1 of the paper, page 6. (Integer < 255 and >= 0).  This is the maximum greylevel for the root class  <span class="math inline"><em>Ω</em><sub>2</sub></span>.
-1. background-threshold: see section 4.1 of the paper, page. 6. (Integer < 255 and >= 0). Minimum value for root and non-root materials (<span class="math inline"><em>Ω</em><sub>1</sub></span> and <span class="math inline"><em>Ω</em><sub>2</sub></span>).  Use of this value aids in removing known non-root voxels from the search region, such as air pockets.
+1. input: (input directory, string) set up according to [Required Input Directory](#required-input-directories) [Mandatory].
+1. output: (output directory, string) ideally empty directory where the results will be written.  Results computed with the method and parameters are also provided with the dataset [Mandatory].
+1. lowerthresh: (lower-root-threshold) see section 4.1 of the paper, page 6. (Integer < 255 and >= 0).  This is the minimum greylevel for the root class  <span class="math inline"><em>Ω</em><sub>2</sub></span>.
+1. upperthresh: (upper-root-threshold) see section 4.1 of the paper, page 6. (Integer < 255 and >= 0).  This is the maximum greylevel for the root class  <span class="math inline"><em>Ω</em><sub>2</sub></span>.
+1. background: (background-threshold) see section 4.1 of the paper, page. 6. (Integer < 255 and >= 0). Minimum value for root and non-root materials (<span class="math inline"><em>Ω</em><sub>1</sub></span> and <span class="math inline"><em>Ω</em><sub>2</sub></span>).  Use of this value aids in removing known non-root voxels from the search region, such as air pockets.
 1. nu (<span class="math inline"><em>ν</em></span>): (double), regularization parameter that favors smaller surfaces.  See text Equation 1 from the paper, and accompanying text.
 1. grid-resolution: (unsigned integer), this is parameter <span class="math inline"><em>s</em> in the paper, and represents the size of the grid edges.
 1. band-size: (unsigned integer), this is parameter <span class="math inline"><em>b</em> in the paper, and represents the size of the band used for the narrow band distance transform.  <span class="math inline"><em>s</em> ≥ <em>b</em></span>, see section 3.2, of page 4 of the paper for details.   grid-resolution ≥ band-size.
@@ -189,7 +190,7 @@ If write-on-image is selected, the final result is indicated, in blue, over the 
 
 Using input `SoybeanDataset` from the dataset release [http://doi.org/10.5281/zenodo.3333709](http://doi.org/10.5281/zenodo.3333709), the result is `SoybeanResultJul11` (also provided as part of the dataset).
 
-Select the segmentation mode using the --segmentation flag, and I have options such as those below:
+Select the segmentation mode using the `--segmentation` flag, and I have options such as those below:
 
 ````bash
 --segmentation \
@@ -213,7 +214,7 @@ Select the segmentation mode using the --segmentation flag, and I have options s
 
 Using input `CassavaDataset` from the dataset release [http://doi.org/10.5281/zenodo.3333709](http://doi.org/10.5281/zenodo.3333709), the result is `CassavaResultJul12` (also provided as part of the dataset).
 
-Select the segmentation mode using the --segmentation flag, and I have options such as those below:
+Select the segmentation mode using the `--segmentation` flag, and I have options such as those below:
  
 ````bash
 --segmentation \

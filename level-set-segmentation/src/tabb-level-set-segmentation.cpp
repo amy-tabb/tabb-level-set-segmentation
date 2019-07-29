@@ -268,6 +268,7 @@ int main (int argc, char **argv)
 	EnsureDirHasTrailingBackslash(input_directory);
 	EnsureDirHasTrailingBackslash(output_directory);
 
+
 	if (do_segmentation== true){
 
 		// do those dirs exist?
@@ -336,6 +337,7 @@ int main (int argc, char **argv)
 		WriteSlices(input_directory, list_files, output_directory, max_number_threads);
 
 	}
+
 
 
 	/* Instead of reporting ‘--verbose’
